@@ -1,0 +1,1 @@
+print(len(set([int(bin(n)[2:-2], 2) for n in range(20, 601)])))

@@ -1,0 +1,1 @@
+print(min(filter(lambda x: x > 40, [int(bin(n)[2:] + str(1 * (bin(n)[2:].count('1') > bin(n)[2:].count('0'))), 2) for n in range(100)])))
