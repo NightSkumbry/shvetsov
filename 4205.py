@@ -10,16 +10,16 @@ ans = 0
 
 while sum(a) >= m:
     s = a[0]
-    a.remove(a[0])
+    a.pop(0)
     while m-s > a[0]:
         s += a[0]
-        a.remove(a[0])
+        a.pop(0)
         ans+=1
     d = list(filter(lambda x: x >= m-s, a))[-1]
     if s+d-m > 0:
         a.append(s+d-m)
     ans += 1
-    a.remove(list(filter(lambda x: x >= m-s, a))[-1])
+    a.remove(d)
     a.sort()
     a = a[::-1]
 
