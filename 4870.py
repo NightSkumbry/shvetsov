@@ -1,0 +1,1 @@
+print(sum(map(lambda x: int(x[-1]*10 + x[-2]) - int(x[x[0] == 0]*10 + x[x[0] != 0]) == 20, [list(sorted(map(int, str(i)))) for i in range(301, 400)])))
