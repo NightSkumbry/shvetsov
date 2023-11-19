@@ -1,6 +1,5 @@
 with open('./files/2159.txt') as f:
     g = f.read()
-    g = '1\n'+'2\n'*1000000+'1'
     a = list(map(int, g.strip().split('\n')))
 
 l = len(a)

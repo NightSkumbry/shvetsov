@@ -14,6 +14,8 @@ def A():
         b.append(s)
     print(ans)
 
+A()
+
 def B():
     with open('./files/4922_b.txt') as f:
         a = f.read().strip().split('\n')

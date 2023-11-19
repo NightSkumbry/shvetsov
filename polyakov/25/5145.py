@@ -10,7 +10,7 @@ def dels(n):
                 s.add(j)
     
     return s
-print(dels(75_000_000+6752))
+
 a = 0
 for i in range(2, 10**6, 2):
     r = dels(75_000_000 + i)

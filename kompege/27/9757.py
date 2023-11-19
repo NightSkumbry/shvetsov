@@ -22,7 +22,7 @@ def B():
         ak = ak[2:]
     maxi = 0
     for q,w,e in g:
-        print(1)
+        print('wait')
         a1 = list(map(lambda x: x*(x%q==0), ak))
         a2 = list(map(lambda x: x*(x%w==0), ak))
         a3 = list(map(lambda x: x*(x%e==0), ak))
