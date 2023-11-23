@@ -57,5 +57,22 @@ def f7(n, k, m=None): # lcm
     return f7(n, k, m+1)
 
 
+def f4_sl(n):
+    if len(n) == 1:
+        return n
+    h1 = f4_sl(n[:int(len(n)/2)])
+    h2 = f4_sl(n[int(len(n)/2):])
+    h = []
+    for _ in range(len(n)):
+        if h1 and h2:
+            if h1[0] < h2[0]:
+                h.append(h1.pop(0))
+            else:
+                h.append(h2.pop(0))
+        else:
+            h += h1 + h2
+            break
+    return h
 
-print(f7(6, 4))
+print(f4_sl([3,8,9,1,0,7,2,2,6,2]))
+
