@@ -31,12 +31,7 @@ def B():
     for i in range(k, len(b)):
         m = min(m, b[i-k])
         ans = max(ans, b[i]-m)
-    print(ans)    
-    
-            
-            
-    
-
+    print(ans)
 
 
 

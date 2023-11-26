@@ -19,13 +19,14 @@ def B():
         a = list(map(int, f.read().strip().split('\n')))
         k = a[0]
         a = a[2:]
-    
+
     b = [0]*k
     while a[len(b)+k:]:
         m = min(a[len(b)+k:])
         mi = len(a)-a[::-1].index(m)-1
         for i in a[len(b):mi-k+1]:
             b.append(m+i)
+    
     c = []
     while b[len(c)+k:]:
         m = min(b[len(c)+k:])
@@ -36,6 +37,6 @@ def B():
     print(min(c))
 
 
-# A()
 import timeit
+print(timeit.timeit(A, number=1))
 print(timeit.timeit(B, number=1))
