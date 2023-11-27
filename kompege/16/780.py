@@ -1,5 +1,5 @@
 import functools
-@functools.lru_cache(None) # Хуй его знает чт это, но оно ожевило код
+@functools.lru_cache(None) # Хрен его знает чт это, но оно ожевило код
 def f(n):
     if n == 0:
         return 1
