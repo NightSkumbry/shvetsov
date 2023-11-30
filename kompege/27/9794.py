@@ -42,6 +42,6 @@ def B():
 
 
 
-A()
 import timeit
+print(timeit.timeit(A, number=1))
 print(timeit.timeit(B, number=1))

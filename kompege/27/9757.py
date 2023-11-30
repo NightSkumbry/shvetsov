@@ -21,8 +21,10 @@ def B():
         k = ak[0]
         ak = ak[2:]
     maxi = 0
+    counter = 0
     for q,w,e in g:
-        print('wait')
+        counter += 1
+        print(f'{counter} / {len(g)} ...')
         a1 = list(map(lambda x: x*(x%q==0), ak))
         a2 = list(map(lambda x: x*(x%w==0), ak))
         a3 = list(map(lambda x: x*(x%e==0), ak))
@@ -52,7 +54,6 @@ def B():
 
 
 
-
-A()
 import timeit
+print(timeit.timeit(A, number=1))
 print(timeit.timeit(B, number=1))

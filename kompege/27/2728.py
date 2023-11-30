@@ -13,10 +13,12 @@ def A():
 def B():
     with open('./files/27B_2728.txt') as f:
         a = list(map(int, f.read().strip().split('\n')[1:]))
+    
     m = max(map(lambda x: x*(x%23==0 and x%2==0), a))
     a1 = a.copy()
     a1.pop(a.index(m))
     maxi = m+max(map(lambda x: x*(x%2==0), a1))
+    
     m = max(map(lambda x: x*(x%23==0 and x%2==1), a))
     a1 = a.copy()
     a1.pop(a.index(m))
@@ -26,6 +28,7 @@ def B():
 
 
 
-A()
+
 import timeit
+print(timeit.timeit(A, number=1))
 print(timeit.timeit(B, number=1))

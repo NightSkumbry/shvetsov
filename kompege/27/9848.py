@@ -1,3 +1,5 @@
+from itertools import accumulate
+
 
 def A():
     with open('./files/27_A_9848.txt') as f:
@@ -23,9 +25,7 @@ def B():
         a = list(map(int, f.read().strip().split('\n')))
         k = a[0]+1
         a = a[2:]
-    b = [a[0]]
-    for i in a[1:]:
-        b.append(b[-1]+i)
+    b = [0] + list(accumulate(a))
     ans = 0
     m = 0
     for i in range(k, len(b)):
@@ -35,7 +35,7 @@ def B():
 
 
 
-A()
 import timeit
+print(timeit.timeit(A, number=1))
 print(timeit.timeit(B, number=1))
 
