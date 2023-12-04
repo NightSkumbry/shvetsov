@@ -23,6 +23,7 @@ def B():
     a1 = a.copy()
     a1.pop(a.index(m))
     maxi = max(maxi, m+max(map(lambda x: x*(x%2==1), a1)))
+    
     print(maxi)
 
 
