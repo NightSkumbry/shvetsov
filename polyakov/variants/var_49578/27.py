@@ -1,5 +1,5 @@
 def A():
-    with open('./some_files/var_49578/27-110a.txt') as f:
+    with open('./polyakov/variants/var_49578/27-110a.txt') as f:
         a = [list(map(int, i.split())) for i in f.readlines()]
         k = a[0][1]
         a = a[1:]
@@ -19,11 +19,32 @@ def A():
 
 
 def B():
-    with open('./some_files/var_49578/27-110a.txt') as f:
+    with open('./polyakov/variants/var_49578/27-110b.txt') as f:
         a = [list(map(int, i.split())) for i in f.readlines()]
         k = a[0][1]
         a = a[1:]
-
+        
+        b = [[0, k]]
+        for i in a:
+            br = []
+            for r in b:
+                br.append([r[0] + i[1], k])
+                br.append([r[0], r[1]])
+                if r[1]:
+                    br.append([r[0] + i[0], r[1]-1])
+            br.sort()
+            br = br[::-1]
+            b = [br[0]]
+            for r in br[1:]:
+                if r[1] > b[-1][1]:
+                    o = r[1]
+                    b.append(r)
+        
+    print(b[0][0])
+                
+                
 
 import timeit as t
 print(t.timeit(A, number=1))
+print(t.timeit(B, number=1))
+
