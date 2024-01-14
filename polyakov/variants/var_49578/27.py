@@ -37,7 +37,6 @@ def B():
             b = [br[0]]
             for r in br[1:]:
                 if r[1] > b[-1][1]:
-                    o = r[1]
                     b.append(r)
         
     print(b[0][0])

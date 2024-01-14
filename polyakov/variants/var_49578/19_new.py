@@ -9,7 +9,9 @@ def f19(s, t=0):
         return sum(s) <= 110
     if t >= 2:
         return False
+    
     a = [f19( (s[0]+1, s[1]), t+1 ), f19( (s[0], s[1]+1), t+1 ), f19( (s[0]*2, s[1]), t+1 ), f19( (s[0], s[1]*2), t+1 )]
+    
     if t%2 == 0:
         return all(a)
     return any(a)
@@ -28,7 +30,9 @@ def f20(s, t=0):
         return sum(s) <= 110
     if t >= 3:
         return False
+    
     a = [f20( (s[0]+1, s[1]), t+1 ), f20( (s[0], s[1]+1), t+1 ), f20( (s[0]*2, s[1]), t+1 ), f20( (s[0], s[1]*2), t+1 )]
+    
     if t % 2 == 0:
         return any(a)
     return all(a)
@@ -52,7 +56,9 @@ def f21(s, t=0):
         return sum(s) <= 110
     if t >= 4:
         return False
+    
     a = [f21( (s[0]+1, s[1]), t+1 ), f21( (s[0], s[1]+1), t+1 ), f21( (s[0]*2, s[1]), t+1 ), f21( (s[0], s[1]*2), t+1 )]
+    
     if t % 2 == 0:
         return all(a)
     return any(a)
