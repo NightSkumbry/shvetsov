@@ -1,10 +1,10 @@
 
 def f19(x, t=0):
     if x < 117:
-        if t == 2:
+        if t == 3:
             return True
         return False
-    if t >= 2:
+    if t >= 3:
         return False
     
     a = [f19(x-7, t+1), f19(x//3, t+1)]
@@ -12,7 +12,7 @@ def f19(x, t=0):
     return any(a)
 
 ans = []
-for s in range(117, 10_000):
+for s in range(117, 10_001):
     if f19(s):
         ans.append(s)
 print(ans[-1])

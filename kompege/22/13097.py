@@ -50,11 +50,10 @@ def run(running, processes, not_started):
     return res + r
     
 ans = 0
-for p1, p2, p3, p4 in permutations(range(count), 4):
+for p1, p2, p3, p4 in permutations(range(count), 4): # всё в одном
     prov = can_be_parallel[p1] & can_be_parallel[p2] & can_be_parallel[p3] & can_be_parallel[p4]
-    if p1 in prov and p2 in prov and p3 in prov and p4 in prov:
-        t = 0
-        not_started = set(range(count)) - (depends[p1]|depends[p2]|depends[p3]|depends[p4]|{p1,p2,p3,p4})
+    if p1 in prov and p2 in prov and p3 in prov and p4 in prov: # придумать иную проверрку
+        not_started = set(range(count)) - (depends[p1]|depends[p2]|depends[p3]|depends[p4]|{p1,p2,p3,p4}) 
         running = sorted([times[i] for i in (p1, p2, p3, p4)])
         processes = sorted([p1, p2, p3, p4], key=lambda x: times[x])
         f = run(running, processes, not_started)
