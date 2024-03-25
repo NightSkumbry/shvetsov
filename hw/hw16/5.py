@@ -1,7 +1,7 @@
 
 def test(A):
-    for x in range(100000):
-        k = ((x & 156 != 0) or (x & 436 != 0) <= (x & A > 0))
+    for x in range(10000):
+        k = (((x & 156) != 0) or ((x & 436) != 0)) <= ((x & A) > 0)
         if not k:
             return False
     return True
