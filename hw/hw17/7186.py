@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
 with open('./hw/hw17/26-143.txt') as f:
     N = int(f.readline())
     a = [list(map(int, i.split())) for i in f]
@@ -52,3 +53,14 @@ while i <= a[-1][0] or (q1 or q2):
 
 
 print(ans1, ans2)
+=======
+with open('./hw/hw17/26-143t.txt') as f:
+    N = int(f.readline())
+    a = [list(map(int, i.split())) for i in f]
+
+a.sort(key=lambda x: x[0])
+
+for i in range(1)
+
+
+>>>>>>> cf316a4 (..)
