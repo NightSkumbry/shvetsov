@@ -18,7 +18,7 @@ def F(file):
     
     ans = 10**1000
     o = 6
-    for i in range(N+1, 2*N):
+    for i in range(N+1, 2*N+1):
         if s <= ans:
             o = i-N
             ans = min(ans, s)
@@ -33,16 +33,6 @@ def F(file):
 F('t')
 F('a')
 F('b')
-
-
-
-
-
-
-
-
-
-
 
 
 
