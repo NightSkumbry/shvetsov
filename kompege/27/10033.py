@@ -44,12 +44,14 @@ def F(file):
 
     cs([])
     
-    print(ans)
+    print(ans[0]%(10**9+7))
 
 
 
 
 F('T')
+F('A')
+F('B')
 
 
 
